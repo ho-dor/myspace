@@ -20,7 +20,7 @@ const fetchPosts = async () => {
   return posts;
 };
 
-export async function getStaticParams() {
+async function getStaticParams() {
   const posts = await fetchPosts();
   return posts.map((post) => {
     return { slug: post.slug };
